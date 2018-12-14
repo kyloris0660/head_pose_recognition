@@ -1,0 +1,10 @@
+BATCH_SIZE = 32
+FEATURE_DIM_1 = 288
+FEATURE_DIM_2 = 384
+NUM_CHANNEL = 3
+NUM_LABEL = 4
+EPOCHS = 80
+VERBOSE = 1
+MODEL_NAME = 'foo'
+LABEL_PATH = '/Users/kyloris/Downloads/HeadPoseImageDatabase/txt/'
+DATA_PATH = '/Users/kyloris/Downloads/HeadPoseImageDatabase/photo/'
