@@ -31,7 +31,8 @@ def toy_model():
     net.add(Conv2D(128, kernel_size=(3, 3), padding='same', activation='relu'))
     net.add(BatchNormalization())
 
-    net.add(Flatten())
+    # net.add(Flatten())
+    net.add(GlobalAveragePooling2D())
     net.add(Dense(64, activation='relu'))
     net.add(Dense(NUM_LABEL, activation='tanh'))
 
