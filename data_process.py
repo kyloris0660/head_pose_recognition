@@ -20,7 +20,7 @@ def data2array():
             a = re.findall(r'[-+]?\d+', data[i])[-2:]
             a = [int(i) for i in a]
             vec.append(a)
-            
+
             photo = Image.open(DATA_PATH + data[i])
             vec_of_pix[cnt] = img_to_array(photo)
             cnt += 1
@@ -41,8 +41,9 @@ def gen_train_test(split_ratio=0.7, random_state=42):
     return train_test_split(X, y, test_size=(1 - split_ratio), random_state=random_state)
 
 
-if '__name__' == '__main__':
+if __name__ == '__main__':
     data2array()
+    print('Saved data to array.')
 
 
 

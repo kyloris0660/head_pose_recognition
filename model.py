@@ -34,8 +34,8 @@ def toy_model():
     # net.add(Flatten())
     net.add(GlobalAveragePooling2D())
     net.add(Dense(64, activation='relu'))
-    net.add(Dense(NUM_LABEL, activation='tanh'))
+    net.add(Dense(NUM_LABEL))
 
-    net.compile(loss='mean_squared_error',metrics=['mse'],
+    net.compile(loss='mean_squared_error',metrics=['mae'],
                 optimizer=keras.optimizers.Adadelta())
     return net
