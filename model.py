@@ -43,7 +43,7 @@ def toy_model():
 
 
 def Densenet_model(depth=22, nb_dense_block=3, num_filter=32, growing_rate=12, dropout_rate=0.2):
-    model_input = Input(FEATURE_DIM_1, FEATURE_DIM_2, NUM_CHANNEL)
+    model_input = Input((FEATURE_DIM_1, FEATURE_DIM_2, NUM_CHANNEL))
     nb_layers = int((depth - 4) / 3)
     x = Conv2D(num_filter, (3, 3),
                kernel_initializer="he_uniform",
